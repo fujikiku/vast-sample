@@ -1,0 +1,22 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="wrapper_to_broken">
+    <Wrapper>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <VASTAdTagURI><![CDATA[https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/broken.xml]]></VASTAdTagURI>
+
+      <Error><![CDATA[https://example.com/track/error?code=[ERRORCODE]&reason=[REASON]]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression]]></Impression>
+
+      <Creatives>
+        <Creative id="cr_wrapper_tracking" sequence="1">
+          <Linear>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[http://example.com/track/start]]></Tracking>
+              <Tracking event="complete"><![CDATA[http://example.com/track/complete]]></Tracking>
+            </TrackingEvents>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </Wrapper>
+  </Ad>
+</VAST>

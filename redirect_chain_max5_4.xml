@@ -1,0 +1,22 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="redirect_chain_4">
+    <Wrapper>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <VASTAdTagURI><![CDATA[https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/redirect_chain_max5_5.xml]]></VASTAdTagURI>
+
+      <Error><![CDATA[http://example.com/track/error?code=[ERRORCODE]&step=4]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression?step=4]]></Impression>
+
+      <Creatives>
+        <Creative id="cr_wrapper_tracking" sequence="1">
+          <Linear>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[http://example.com/track/start?step=4]]></Tracking>
+              <Tracking event="complete"><![CDATA[http://example.com/track/complete?step=4]]></Tracking>
+            </TrackingEvents>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </Wrapper>
+  </Ad>
+</VAST>

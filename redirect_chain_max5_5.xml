@@ -1,0 +1,28 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="redirect_chain_5">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>リダイレクトチェーン終端広告</AdTitle>
+
+      <Error><![CDATA[http://example.com/track/error?code=[ERRORCODE]&step=5]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression?step=5]]></Impression>
+
+      <Creatives>
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[http://example.com/track/start?step=5]]></Tracking>
+              <Tracking event="complete"><![CDATA[http://example.com/track/complete?step=5]]></Tracking>
+            </TrackingEvents>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>

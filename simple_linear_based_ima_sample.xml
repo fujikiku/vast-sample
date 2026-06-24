@@ -1,0 +1,31 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="streaks_companion_click_test">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>CompanionClickTracking 検証用サンプル</AdTitle>
+
+      <Error><![CDATA[https://pubads.g.doubleclick.net/pagead/interaction/?ai=BICLMPDs7ar3tPL6hjeYPj-ib6AyD6qWVRgAAABABII64hW84AViLgsbBgwRgifPEhPQTugEKNzI4eDkwX3htbMgBBcACAuACAOoCJy8yMTc3NTc0NDkyMy9leHRlcm5hbC9zaW5nbGVfYWRfc2FtcGxlc_gC-dEegAMBkAPsCZgD4AOoAwHgBAHSBQYQj6XEiRaQBgGgBiOIBwGQBwKoB7i-sQKoB_PRG6gHltgbqAeqm7ECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAqgH59exAtgHAeAHD9IINwgAEAIYnQEyCICAgICAgIAIOhSf0ICAgIAEkMCAgICgqIACqIGAEEi9_cE6WJvTneXknpUDYAHYCAKACgWYCwGqDQJKUOoNEwji0Z7l5J6VAxW-UMMGHQ_0Bs3wDQHQFQH4FgGAFwE&sigh=ExjI-KTuZRI&label=videoplayfailed[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjstHKVUvAXJhYxEhkSkb5J37Wi5wR3oMrdUaNmgzFOUATaNjLMnXAiTqKCpyRvlBD3s3OAjRkKYDEG_e3r_Cq4ImwloRS_-DTWbA_ZsZUwtYOtR_moMvnjiGrhQtYd8kHqaUl5BCylJX6Ir2e_pwR_tjWqgo1EW-XX3Dzl4Fi9EKPVOTsZlK6blb3bY3XNP_oJA2FvauzMZ2Qass_Dwl7MGZeJOYKSrW04TXPNnXWXC6sjp7QnqYKl1dNOlwrOBAW71CSXgl7eXCk6ViC-_d08ZGz6MC4c_d2Rj45ALGVw-EgVvjBb0sC-lXfn506n7vnSNwRIwCWSq9q-TlF0AMI-_5ZSGkfCixIzlvGaQeQGuLC0GhMBeSV9v893QFURDIhou5OCxPXbVfjSuNmFic3jw4YKKc&sai=AMfl-YTdw6Ikt14hWK8u4_faFat8F8_AAItbBSyKtksAlZl-5jpSLSLX_03FjiL7IPndKqz6wTUajjxxQj0hcE6UyTJeOZ3jngV7GwOQPkU9opVM3CIBOqmSmc6DT1lXT9hpuzlAn771jVN_MwKmtgA-lTVnk1aaFxvx4Egi0kNQg1tZdCodnijoVE-4TMpSxo67AW88j4uaP18SlvdX7Mt0Jq_oztSdzxhhiDd85ckMyZYMjNxmtRNwMjzG3rJYkwBsgI59hW5yrbFfHKkbqttY7qWSqV82hWobS0zudA3dR0NLzxCR2YH8O3Dlp9jjLnGA6eqIc8HsiZChyqryDlJCZzxev22Hab-oMYDeNKdqfzCatWxQ7W4SByOyyb3T8d5b8OKxx-0&sig=Cg0ArKJSzPgCRTreu5xgEAE&uach_m=%5BUACH%5D&adurl=]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <TrackingEvents>
+              <!-- 再生進行（時間ベース） -->
+              <Tracking event="start"><![CDATA[https://pubads.g.doubleclick.net/pagead/interaction/?ai=BpTkK-Dk7avbUFb-VjeYP_o7P8AuD6qWVRgAAABABII64hW84AViLgsbBgwRgifPEhPQTugEKNzI4eDkwX3htbMgBBcACAuACAOoCJy8yMTc3NTc0NDkyMy9leHRlcm5hbC9zaW5nbGVfYWRfc2FtcGxlc_gC-dEegAMBkAPsCZgD4AOoAwHgBAHSBQYQj6XEiRaQBgGgBiOIBwGQBwKoB7i-sQKoB_PRG6gHltgbqAeqm7ECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAqgH59exAtgHAeAHCdIINwgAEAIYnQEyCICAgICAgIAIOhSf0ICAgIAEkMCAgICgqIACqIGAEEi9_cE6WLyPt8rjnpUDYAHYCAKACgWYCwGqDQJKUOoNEwjY-7fK456VAxW_SsMGHX7HE77wDQHQFQH4FgGAFwE&sigh=5osXOoFLTsc&label=part2viewed&cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]&mph=[MEDIAPLAYHEAD]&asset=[ASSETURI]&type=[ADTYPE]&txid=[TRANSACTIONID]&adcount=[ADCOUNT]&bpos=[BREAKPOSITION]&bmaxads=[BREAKMAXADS]&bmaxdur=[BREAKMAXDURATION]&placement=[PLACEMENTTYPE]&ss=[SERVERSIDE]&bundle=[APPBUNDLE]&domain=[DOMAIN]&pageurl=[PAGEURL]&cua=[CLIENTUA]&omid=[OMIDPARTNER]]]></Tracking>
+              <Tracking event="complete"><![CDATA[https://pubads.g.doubleclick.net/pagead/interaction/?ai=BpTkK-Dk7avbUFb-VjeYP_o7P8AuD6qWVRgAAABABII64hW84AViLgsbBgwRgifPEhPQTugEKNzI4eDkwX3htbMgBBcACAuACAOoCJy8yMTc3NTc0NDkyMy9leHRlcm5hbC9zaW5nbGVfYWRfc2FtcGxlc_gC-dEegAMBkAPsCZgD4AOoAwHgBAHSBQYQj6XEiRaQBgGgBiOIBwGQBwKoB7i-sQKoB_PRG6gHltgbqAeqm7ECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAqgH59exAtgHAeAHCdIINwgAEAIYnQEyCICAgICAgIAIOhSf0ICAgIAEkMCAgICgqIACqIGAEEi9_cE6WLyPt8rjnpUDYAHYCAKACgWYCwGqDQJKUOoNEwjY-7fK456VAxW_SsMGHX7HE77wDQHQFQH4FgGAFwE&sigh=5osXOoFLTsc&label=videoplaytime100&cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]&mph=[MEDIAPLAYHEAD]&asset=[ASSETURI]&type=[ADTYPE]&txid=[TRANSACTIONID]&adcount=[ADCOUNT]&bpos=[BREAKPOSITION]&bmaxads=[BREAKMAXADS]&bmaxdur=[BREAKMAXDURATION]&placement=[PLACEMENTTYPE]&ss=[SERVERSIDE]&bundle=[APPBUNDLE]&domain=[DOMAIN]&pageurl=[PAGEURL]&cua=[CLIENTUA]&omid=[OMIDPARTNER]]]></Tracking>
+            </TrackingEvents>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>

@@ -1,0 +1,41 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="companion_click_test">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>CompanionClickTracking 検証用サンプル</AdTitle>
+
+      <Error><![CDATA[http://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <TrackingEvents>
+              <!-- 再生進行（時間ベース） -->
+              <Tracking event="start"><![CDATA[https://example.com/track/start?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]&mph=[MEDIAPLAYHEAD]&asset=[ASSETURI]&type=[ADTYPE]&txid=[TRANSACTIONID]&adcount=[ADCOUNT]&bpos=[BREAKPOSITION]&bmaxads=[BREAKMAXADS]&bmaxdur=[BREAKMAXDURATION]&placement=[PLACEMENTTYPE]&ss=[SERVERSIDE]&bundle=[APPBUNDLE]&domain=[DOMAIN]&pageurl=[PAGEURL]&cua=[CLIENTUA]&omid=[OMIDPARTNER]]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[https://example.com/track/firstQuartile?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]]]></Tracking>
+              <Tracking event="midpoint"><![CDATA[https://example.com/track/midpoint?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]&mph=[MEDIAPLAYHEAD]]]></Tracking>
+              <Tracking event="thirdQuartile"><![CDATA[https://example.com/track/thirdQuartile?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]]]></Tracking>
+              <Tracking event="complete"><![CDATA[https://example.com/track/complete?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]&mph=[MEDIAPLAYHEAD]&asset=[ASSETURI]&type=[ADTYPE]&txid=[TRANSACTIONID]&adcount=[ADCOUNT]&bpos=[BREAKPOSITION]&bmaxads=[BREAKMAXADS]&bmaxdur=[BREAKMAXDURATION]&placement=[PLACEMENTTYPE]&ss=[SERVERSIDE]&bundle=[APPBUNDLE]&domain=[DOMAIN]&pageurl=[PAGEURL]&cua=[CLIENTUA]&omid=[OMIDPARTNER]]]></Tracking>
+              <!-- 任意時刻 progress（VAST 3.0+） -->
+              <Tracking event="progress" offset="00:00:03"><![CDATA[https://example.com/track/progress?t=3s&cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]]]></Tracking>
+              <Tracking event="progress" offset="00:00:07"><![CDATA[https://example.com/track/progress?t=7s&cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]]]></Tracking>
+              <!-- インタラクション系 -->
+              <Tracking event="pause"><![CDATA[https://example.com/track/pause?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]]]></Tracking>
+              <Tracking event="resume"><![CDATA[https://example.com/track/resume?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]]]></Tracking>
+              <Tracking event="skip"><![CDATA[https://example.com/track/skip?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&ph=[ADPLAYHEAD]]]></Tracking>
+            </TrackingEvents>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
