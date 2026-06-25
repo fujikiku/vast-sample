@@ -1,0 +1,10 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test">
+    <Wrapper>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <VASTAdTagURI><![CDATA[https://example.com/not_a_vast_response.html]]></VASTAdTagURI>
+      <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression]]></Impression>
+    </Wrapper>
+  </Ad>
+</VAST>
