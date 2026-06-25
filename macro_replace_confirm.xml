@@ -1,0 +1,29 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>VASTマクロ置き換え検証用サンプル</AdTitle>
+
+      <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[https://example.com/track/start?cb=[CACHEBUSTING]&ts=[TIMESTAMP]&adtype=[ADTYPE]&adcount=[ADCOUNT]&adcat=[ADCATEGORIES]&blockedcat=[BLOCKEDADCATEGORIES]&breakpos=[BREAKPOSITION]&breakmaxads=[BREAKMAXADS]&breakmaxdur=[BREAKMAXDURATION]&breakmaxlen=[BREAKMAXADLENGTH]&breakminlen=[BREAKMINADLENGTH]&mph=[MEDIAPLAYHEAD]&cph=[CONTENTPLAYHEAD]&placement=[PLACEMENTTYPE]&txid=[TRANSACTIONID]&uaid=[UNIVERSALADID]&cua=[CLIENTUA]&dip=[DEVICEIP]&dua=[DEVICEUA]&ifa=[IFA]&ifatype=[IFATYPE]&ll=[LATLONG]&ss=[SERVERSIDE]&sua=[SERVERUA]&appbundle=[APPBUNDLE]&domain=[DOMAIN]&pageurl=[PAGEURL]&apifw=[APIFRAMEWORKS]&clicktype=[CLICKTYPE]&ext=[EXTENSIONS]&mime=[MEDIAMIME]&omidp=[OMIDPARTNER]&playercap=[PLAYERCAPABILITIES]&vastver=[VASTVERSIONS]&verifvendors=[VERIFICATIONVENDORS]&aph=[ADPLAYHEAD]&asid=[ADSERVINGID]&asset=[ASSETURI]&contentid=[CONTENTID]&contenturi=[CONTENTURI]&invstate=[INVENTORYSTATE]&playersize=[PLAYERSIZE]&playerstate=[PLAYERSTATE]&podseq=[PODSEQUENCE]&clickpos=[CLICKPOS]&errorcode=[ERRORCODE]&reason=[REASON]&gdpr=[GDPRCONSENT]&lat=[LIMITADTRACKING]&regs=[REGULATIONS]&contentcat=[CONTENTCAT]&dsa=[DSAPARAMS]&dsapubrender=[DSAPUBRENDER]&dsareq=[DSAREQUIRED]&gppsid=[GPPSECTIONID]&gppstr=[GPPSTRING]&pbm=[PLAYBACKMETHODS]&storeid=[STOREID]&storeurl=[STOREURL]]]></Tracking>
+            </TrackingEvents>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
