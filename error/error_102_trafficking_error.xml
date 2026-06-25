@@ -1,0 +1,6 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test">
+    <!-- InLine も Wrapper も持たない不正な Ad 要素 -->
+    <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+  </Ad>
+</VAST>
