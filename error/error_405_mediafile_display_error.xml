@@ -1,0 +1,25 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>エラー検証用サンプル(MediaFile表示エラー)</AdTitle>
+
+      <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression]]></Impression>
+
+      <Creatives>
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <MediaFiles>
+              <!-- type は video/mp4 だが実際には HTML ページ → コーデックレベルで再生不可 -->
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://example.com/index.html]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
