@@ -1,0 +1,21 @@
+<VAST version="3.0">
+  <Ad id="no1">
+    <InLine>
+      <AdSystem>Test</AdSystem>
+      <AdTitle>no=1</AdTitle>
+      <Impression><![CDATA[https://example.com/impression?no=1]]></Impression>
+      <Creatives>
+        <Creative>
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
