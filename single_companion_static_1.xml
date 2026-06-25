@@ -1,5 +1,5 @@
 <VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
-  <Ad id="streaks_companion_click_test">
+  <Ad id="test">
     <InLine>
       <AdSystem version="1.0">AdServer</AdSystem>
       <AdTitle>コンパニオン広告検証用サンプル(HTMLリソース_パターン1)</AdTitle>
