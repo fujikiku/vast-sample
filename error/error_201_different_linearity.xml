@@ -1,0 +1,25 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>エラー検証用サンプル(プレイヤーが異なるリニアリティを期待)</AdTitle>
+
+      <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_nonlinear" sequence="1">
+          <NonLinearAds>
+            <NonLinear id="nl_1" width="300" height="250" minSuggestedDuration="00:00:10">
+              <StaticResource creativeType="image/png">
+                <![CDATA[https://via.placeholder.com/300x250.png]]>
+              </StaticResource>
+            </NonLinear>
+          </NonLinearAds>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
