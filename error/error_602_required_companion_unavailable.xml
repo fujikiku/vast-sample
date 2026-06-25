@@ -1,0 +1,39 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>エラー検証用サンプル(必須コンパニオン表示不可)</AdTitle>
+
+      <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+
+        <Creative id="cr_companion" sequence="1">
+          <!-- required="all" → コンパニオンが表示できなければ広告全体を中断すべき -->
+          <CompanionAds required="all">
+            <!-- URL を壊して取得失敗させ、必須表示が不可の状態にする -->
+            <Companion id="companion_required" width="300" height="250">
+              <StaticResource creativeType="image/png">
+                <![CDATA[https://example.invalid/companion_not_found.png]]>
+              </StaticResource>
+              <CompanionClickThrough><![CDATA[https://www.google.com/?hl=ja]]></CompanionClickThrough>
+            </Companion>
+          </CompanionAds>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>

@@ -1,0 +1,38 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>エラー検証用サンプル(サポートされるコンパニオンリソースなし)</AdTitle>
+
+      <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+
+        <Creative id="cr_companion" sequence="1">
+          <CompanionAds>
+            <!-- サポートされない creativeType を指定 → 表示可能なリソースなし -->
+            <Companion id="companion_unsupported_type" width="300" height="250">
+              <StaticResource creativeType="application/x-unsupported-format">
+                <![CDATA[https://pagead2.googlesyndication.com/simgad/4446644594546952943]]>
+              </StaticResource>
+              <CompanionClickThrough><![CDATA[https://www.google.com/?hl=ja]]></CompanionClickThrough>
+            </Companion>
+          </CompanionAds>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
