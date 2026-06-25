@@ -12,9 +12,9 @@
           <Linear>
             <Duration>00:00:10</Duration>
             <MediaFiles>
-              <!-- type は video/mp4 だが実際には HTML ページ → コーデックレベルで再生不可 -->
+              <!-- type は video/mp4 だが実際には mkv -->
               <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
-                <![CDATA[https://example.com/index.html]]>
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mkv/720/Big_Buck_Bunny_720_10s_1MB.mkv]]>
               </MediaFile>
             </MediaFiles>
           </Linear>
