@@ -1,0 +1,50 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="streaks_companion_iframe_test">
+    <InLine>
+      <AdSystem version="1.0">StreaksAdServer</AdSystem>
+      <AdTitle>コンパニオン広告検証用サンプル(IFrameリソース_パターン1)</AdTitle>
+
+      <Error><![CDATA[http://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="1280" height="720">
+                <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+
+        <Creative id="cr_companion" sequence="1">
+          <CompanionAds>
+
+            <Companion id="companion_iframe_300x250" width="300" height="250">
+              <IFrameResource>
+                <![CDATA[https://www.google.com/?hl=ja]]>
+              </IFrameResource>
+
+              <TrackingEvents>
+                <Tracking event="creativeView"><![CDATA[http://example.com/track/iframe_companion_view]]></Tracking>
+              </TrackingEvents>
+
+              <CompanionClickThrough>
+                <![CDATA[https://example.com/landing_from_iframe_companion]]>
+              </CompanionClickThrough>
+
+              <CompanionClickTracking>
+                <![CDATA[https://ad-server.example.com/track/iframe_companion_click_success?cb=[TIMESTAMP]]]>
+              </CompanionClickTracking>
+            </Companion>
+
+          </CompanionAds>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
