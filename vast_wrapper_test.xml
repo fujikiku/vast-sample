@@ -2,7 +2,7 @@
   <Ad id="1111" sequence="1">
     <Wrapper>
       <AdSystem version="1.0">AdServer</AdSystem>
-      <VASTAdTagURI><![CDATA[http://10.0.2.2:8080/vast_inline_test.xml]]></VASTAdTagURI>
+      <VASTAdTagURI><![CDATA[https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/vast_inline_test.xml]]></VASTAdTagURI>
       <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
     </Wrapper>
   </Ad>
