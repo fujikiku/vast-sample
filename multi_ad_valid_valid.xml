@@ -14,7 +14,7 @@
             <Duration>00:30:00</Duration>
             <MediaFiles>
               <MediaFile delivery="streaming" type="application/x-mpegURL" width="640" height="360">
-                <![CDATA[https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8]]>
+                <![CDATA[https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/media/test.m3u8]]>
               </MediaFile>
             </MediaFiles>
           </Linear>
