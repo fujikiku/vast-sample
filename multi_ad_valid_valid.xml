@@ -11,7 +11,7 @@
 
         <Creative id="cr_linear" sequence="1">
           <Linear>
-            <Duration>00:30:00</Duration>
+            <Duration>00:00:10</Duration>
             <MediaFiles>
               <MediaFile delivery="streaming" type="application/x-mpegURL" width="640" height="360">
                 <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
