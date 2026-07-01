@@ -14,7 +14,7 @@
             <Duration>00:30:00</Duration>
             <MediaFiles>
               <MediaFile delivery="streaming" type="application/x-mpegURL" width="640" height="360">
-                <![CDATA[https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/media/test.m3u8]]>
+                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
               </MediaFile>
             </MediaFiles>
           </Linear>
