@@ -2,7 +2,7 @@
 #EXT-X-VERSION:3
 #EXT-X-TARGETDURATION:10
 #EXTINF:10.0,
-https://github.com/fujikiku/vast-sample/blob/main/media/seg0.ts
+https://raw.githubusercontent.com/fujikiku/vast-sample/main/media/seg0.ts
 #EXTINF:10.0,
-https://github.com/fujikiku/vast-sample/blob/main/media/seg1.ts
+https://raw.githubusercontent.com/fujikiku/vast-sample/main/media/seg1.ts
 #EXT-X-ENDLIST
