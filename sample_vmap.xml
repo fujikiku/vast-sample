@@ -1,0 +1,15 @@
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+    <vmap:AdBreak
+        breakId="postroll"
+        breakType="linear"
+        timeOffset="end">
+        <vmap:AdSource
+            allowMultipleAds="false"
+            followRedirects="true"
+            id="postroll-ad-1">
+            <vmap:AdTagURI templateType="vast3">
+                <![CDATA[ https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/multi_ad_valid_valid.xml ]]>
+            </vmap:AdTagURI>
+        </vmap:AdSource>
+    </vmap:AdBreak>
+</vmap:VMAP>
