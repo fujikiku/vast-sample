@@ -8,7 +8,7 @@
             followRedirects="true"
             id="postroll-ad-1">
             <vmap:AdTagURI templateType="vast3">
-                <![CDATA[ https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/multi_ad_valid_valid.xml ]]>
+                <![CDATA[ https://raw.githubusercontent.com/fujikiku/vast-sample/refs/heads/main/multi_ad_valid_valid_invalid.xml ]]>
             </vmap:AdTagURI>
         </vmap:AdSource>
     </vmap:AdBreak>
