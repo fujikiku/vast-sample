@@ -1,0 +1,47 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="4.0">
+  <Ad id="1111_2222_33333">
+    <InLine>
+      <AdSystem>AdTest Studio</AdSystem>
+      <AdTitle>test AdTest Studio (CreativeExtensionのみ)</AdTitle>
+      <Advertiser>brand 時間指定広告主</Advertiser>
+      <Error>
+        <![CDATA[ https://ads.example-adserver.com/interaction?event=error&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333 ]]>
+      </Error>
+      <Impression>
+        <![CDATA[ https://ads.example-adserver.com/interaction?event=impression&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333 ]]>
+      </Impression>
+      <Creatives>
+        <Creative id="nonlinear-1111_2222_33333" sequence="1">
+          <NonLinearAds>
+            <NonLinear id="nonlinear-1111_2222_33333-300x250-extension-only" width="300" height="250">
+              <NonLinearClickTracking>
+                <![CDATA[ https://ads.example-adserver.com/interaction?event=click&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333&creative_id=nonlinear-1111_2222_33333-300x250-extension-only ]]>
+              </NonLinearClickTracking>
+              <TrackingEvents>
+                <Tracking event="creativeView">
+                  <![CDATA[ https://ads.example-adserver.com/interaction?event=creativeView&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333&creative_id=nonlinear-1111_2222_33333-300x250-extension-only ]]>
+                </Tracking>
+              </TrackingEvents>
+            </NonLinear>
+          </NonLinearAds>
+        </Creative>
+        <!-- ===== CompanionAdsを持たない(=StaticResource/HTMLResourceともに無い)。
+             SDK側(DefaultAdDisplayContainer)は描画対象が無いため何もせず、
+             アプリ側がCreativeExtensionを使って独自Viewをフォールバック表示する想定 ===== -->
+        <Creative id="companion-1111_2222_33333" sequence="1">
+          <CreativeExtensions>
+            <CreativeExtension type="companion-native-meta">
+              <HeaderImage>https://imayuki-sozai.s3.ap-northeast-1.amazonaws.com/ad_test/items/bakuraku_header_image.jpg</HeaderImage>
+              <Icon>https://imayuki-sozai.s3.ap-northeast-1.amazonaws.com/ad_test/items/bakuraku_icon.png</Icon>
+              <Title>[時間指定ノンリニア]過去放送回はxxxで独占配信</Title>
+              <Description>見逃し配信を今すぐチェック。新規登録で視聴開始。</Description>
+              <CtaText>契約して視聴</CtaText>
+              <BgColor>#ffffff</BgColor>
+              <BgImage>https://statics.example-cdn.com/images/content/thumbnail/specialMain/xlarge/meisaku-drama.jpg?v=83</BgImage>
+            </CreativeExtension>
+          </CreativeExtensions>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
