@@ -4,8 +4,8 @@
       <AdSystem version="1.0">AdServer</AdSystem>
       <AdTitle>コンパニオン広告検証用サンプル(HTMLリソース_パターン1)</AdTitle>
 
-      <Error><![CDATA[http://example.com/error?code=[ERRORCODE]]]></Error>
-      <Impression><![CDATA[http://example.com/track/impression]]></Impression>
+      <Error><![CDATA[https://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression]]></Impression>
 
       <Creatives>
 
