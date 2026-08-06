@@ -11,20 +11,6 @@
         <![CDATA[ https://ads.example-adserver.com/interaction?event=impression&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333 ]]>
       </Impression>
       <Creatives>
-        <Creative id="nonlinear-1111_2222_33333" sequence="1">
-          <NonLinearAds>
-            <NonLinear id="nonlinear-1111_2222_33333-300x250-static" width="300" height="250">
-              <NonLinearClickTracking>
-                <![CDATA[ https://ads.example-adserver.com/interaction?event=click&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333&creative_id=nonlinear-1111_2222_33333-300x250-static ]]>
-              </NonLinearClickTracking>
-              <TrackingEvents>
-                <Tracking event="creativeView">
-                  <![CDATA[ https://ads.example-adserver.com/interaction?event=creativeView&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333&creative_id=nonlinear-1111_2222_33333-300x250-static ]]>
-                </Tracking>
-              </TrackingEvents>
-            </NonLinear>
-          </NonLinearAds>
-        </Creative>
         <Creative id="companion-1111_2222_33333" sequence="1">
           <!-- ===== Companion Ads (Static + HTML の両方を持つ。優先順位はSTATIC > HTMLなのでSTATICが表示される) ===== -->
           <CompanionAds>
