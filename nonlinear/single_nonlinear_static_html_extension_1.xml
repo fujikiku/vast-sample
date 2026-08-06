@@ -2,7 +2,7 @@
   <Ad id="1111_2222_33333">
     <InLine>
       <AdSystem>AdTest Studio</AdSystem>
-      <AdTitle>test AdTest Studio (Static+HTML+CreativeExtension)</AdTitle>
+      <AdTitle>test AdTest Studio companion</AdTitle>
       <Advertiser>brand 時間指定広告主</Advertiser>
       <Error>
         <![CDATA[ https://ads.example-adserver.com/interaction?event=error&provider_id=xxx&content_id=xxx&ad_id=1111_2222_33333 ]]>
@@ -50,7 +50,7 @@
           </CompanionAds>
           <!-- ===== CreativeExtension (Companion側でstatic/htmlが描画されるため、アプリ独自Viewへのフォールバックは発生しない想定) ===== -->
           <CreativeExtensions>
-            <CreativeExtension type="companion-native-meta">
+            <CreativeExtension type="payment_svod_companion">
               <HeaderImage>https://imayuki-sozai.s3.ap-northeast-1.amazonaws.com/ad_test/items/bakuraku_header_image.jpg</HeaderImage>
               <Icon>https://imayuki-sozai.s3.ap-northeast-1.amazonaws.com/ad_test/items/bakuraku_icon.png</Icon>
               <Title>[時間指定ノンリニア]過去放送回はxxxで独占配信</Title>
