@@ -1,0 +1,78 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0"
+    xsi:noNamespaceSchemaLocation="vast.xsd">
+    <Ad id="adx1">
+        <InLine>
+            <AdSystem>AdTest Studio</AdSystem>
+            <AdTitle>test ad companion</AdTitle>
+            <Advertiser>Brand</Advertiser>
+            <Error>
+                <![CDATA[ https://ads.example-adserver.com/interaction?event=error&amp;provider_id=00000000000000000000000000&amp;content_id=&amp;ad_id=adx1 ]]>
+            </Error>
+            <Impression>
+                <![CDATA[ https://ads.example-adserver.com/interaction?event=impression&amp;provider_id=00000000000000000000000000&amp;content_id=&amp;ad_id=adx1 ]]>
+            </Impression>
+            <Creatives>
+                <Creative id="companion-adx1" sequence="1">
+                    <CompanionAds>
+                        <Companion height="60" id="companion-adx1-300x60" width="300">
+                            <StaticResource creativeType="image/png">
+                                <![CDATA[ https://placehold.co/300x60.png ]]>
+                            </StaticResource>
+                            <HTMLResource>
+                                <![CDATA[ <!doctype html><html lang="ja"><head><meta charset="utf-8"></head><body style="margin:0"><div style="width:300px;height:60px;background:#eee;display:flex;align-items:center;justify-content:center;font:12px sans-serif;">300x60 HTML(このパターンではStaticが優先され非表示のはず)</div></body></html> ]]>
+                            </HTMLResource>
+                            <CompanionClickThrough>
+                                <![CDATA[ https://dev-payments.example-ad-checkout.com/ad-tracking?ad_id=adx1&amp;creative_id=adx1&amp;provider_id=00000000000000000000000000&amp;series_id=sr0000000_x&amp;episode_id=ep00000000&amp;redirect_uri=https://brand.example.com/register&amp;svod_uri=https://brand.example.com/&amp;ad_type= ]]>
+                            </CompanionClickThrough>
+                            <CompanionClickTracking>
+                                <![CDATA[ https://ads.example-adserver.com/interaction?event=click&amp;provider_id=00000000000000000000000000&amp;content_id=&amp;ad_id=adx1&amp;creative_id=companion-adx1-300x60 ]]>
+                            </CompanionClickTracking>
+                            <TrackingEvents>
+                                <Tracking event="creativeView">
+                                    <![CDATA[ https://ads.example-adserver.com/interaction?event=creativeView&amp;provider_id=00000000000000000000000000&amp;content_id=&amp;ad_id=adx1&amp;creative_id=companion-adx1-300x60 ]]>
+                                </Tracking>
+                                <Tracking event="impression">
+                                    <![CDATA[ https://ads.example-adserver.com/interaction?event=impression ]]>
+                                </Tracking>
+                            </TrackingEvents>
+                        </Companion>
+                        <Companion height="250" id="companion-adx1-300x250" width="300">
+                            <CompanionClickThrough>
+                                <![CDATA[ https://dev-payments.example-ad-checkout.com/ad-tracking?ad_id=adx1&amp;creative_id=adx1&amp;provider_id=00000000000000000000000000&amp;series_id=sr0000000_x&amp;episode_id=ep00000000&amp;redirect_uri=https://brand.example.com/register&amp;svod_uri=https://brand.example.com/&amp;ad_type= ]]>
+                            </CompanionClickThrough>
+                            <CompanionClickTracking>
+                                <![CDATA[ https://ads.example-adserver.com/interaction?event=click&amp;provider_id=00000000000000000000000000&amp;content_id=&amp;ad_id=adx1&amp;creative_id=companion-adx1-300x250 ]]>
+                            </CompanionClickTracking>
+                            <TrackingEvents>
+                                <Tracking event="creativeView">
+                                    <![CDATA[ https://ads.example-adserver.com/interaction?event=creativeView&amp;provider_id=00000000000000000000000000&amp;content_id=&amp;ad_id=adx1&amp;creative_id=companion-adx1-300x250 ]]>
+                                </Tracking>
+                                <Tracking event="impression">
+                                    <![CDATA[ https://ads.example-adserver.com/interaction?event=impression ]]>
+                                </Tracking>
+                            </TrackingEvents>
+                        </Companion>
+                    </CompanionAds>
+                    <CreativeExtensions>
+                        <CreativeExtension type="svod_payment_ads">
+                            <HeaderImage>
+                                https://example-cdn.com/images/ad-assets/header_image/header_image.png
+                            </HeaderImage>
+                            <Icon>
+                                https://example-cdn.com/images/ad-assets/icon_image/icon.jpg
+                            </Icon>
+                            <Title>Companion</Title>
+                            <Description>test DESCRIPTION</Description>
+                            <CtaText>プランをみる</CtaText>
+                            <BgColor>#ffffff</BgColor>
+                            <BgImage>https://example-cdn.com/images/ad-assets/bg_image/bg_image.jpg
+                            </BgImage>
+                            <ModalDescription>modal</ModalDescription>
+                            <ShouldShowModal>false</ShouldShowModal>
+                        </CreativeExtension>
+                    </CreativeExtensions>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
