@@ -1,0 +1,30 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="4.0">
+<!--  使用テスト: #24 / HLS + mp4 (プレーン)  -->
+<Ad id="mediafile-pattern-23">
+<InLine>
+<AdSystem>TVer Studio</AdSystem>
+<AdTitle>MediaFile pattern test 23 (case #24)</AdTitle>
+<Error>
+<![CDATA[ https://ads.in-tver.jp/interaction?event=error ]]>
+</Error>
+<Impression>
+<![CDATA[ https://pubads.g.doubleclick.net/pagead/interaction/?event=impression ]]>
+</Impression>
+<Creatives>
+<Creative id="c1" sequence="1">
+<Linear>
+<Duration>00:00:10</Duration>
+<MediaFiles>
+<MediaFile id="1" delivery="streaming" type="application/x-mpegURL">
+<![CDATA[ https://redirector.gvt1.com/api/manifest/hls_variant/requiressl/yes/source/dclk_video_ads/id/f1be9c477e89fd68/itag/0/playlist_type/DVR/xpc/EgVovf3BOg%3D%3D/acao/yes/ctier/L/hfr/all/keepalive/yes/ip/0.0.0.0/ipbits/0/expire/1787214892/sparams/ip,ipbits,expire,requiressl,source,id,itag,playlist_type,xpc,acao,ctier,hfr/signature/36E053F74A9E4CF115E45C0A45B8A736EBBEF9F0.96385E942176F052B5AEC8FDB59BA1C90FD3752A/key/ck2/cpn/PBPbz8tl0IpPGMhD/file/index.m3u8 ]]>
+</MediaFile>
+<MediaFile id="2" delivery="progressive" type="video/mp4">
+<![CDATA[ https://dev4.s3.ap-northeast-1.amazonaws.com/testcase/videos/midroll_10_seconds_1.mp4 ]]>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+</VAST>
