@@ -1,0 +1,30 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="4.0">
+<!--  使用テスト: #8 / mp4 8K + 360p  -->
+<Ad id="mediafile-pattern-07">
+<InLine>
+<AdSystem>TVer Studio</AdSystem>
+<AdTitle>MediaFile pattern test 07 (case #8)</AdTitle>
+<Error>
+<![CDATA[ https://ads.in-tver.jp/interaction?event=error ]]>
+</Error>
+<Impression>
+<![CDATA[ https://pubads.g.doubleclick.net/pagead/interaction/?event=impression ]]>
+</Impression>
+<Creatives>
+<Creative id="c1" sequence="1">
+<Linear>
+<Duration>00:00:10</Duration>
+<MediaFiles>
+<MediaFile id="1" delivery="progressive" type="video/mp4" width="2401" height="1080">
+<![CDATA[ https://dev4.s3.ap-northeast-1.amazonaws.com/testcase/videos/midroll_10_seconds_1.mp4 ]]>
+</MediaFile>
+<MediaFile id="2" delivery="progressive" type="video/mp4" width="2400" height="1080">
+<![CDATA[ https://dev4.s3.ap-northeast-1.amazonaws.com/testcase/videos/midroll_10_seconds_2.mp4 ]]>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+</VAST>
