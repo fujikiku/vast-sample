@@ -1,0 +1,27 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="4.0">
+<!--  使用テスト: #27 / HLS 単独  -->
+<Ad id="mediafile-pattern-24">
+<InLine>
+<AdSystem>TVer Studio</AdSystem>
+<AdTitle>MediaFile pattern test 24 (case #27)</AdTitle>
+<Error>
+<![CDATA[ https://ads.in-tver.jp/interaction?event=error ]]>
+</Error>
+<Impression>
+<![CDATA[ https://pubads.g.doubleclick.net/pagead/interaction/?event=impression ]]>
+</Impression>
+<Creatives>
+<Creative id="c1" sequence="1">
+<Linear>
+<Duration>00:00:10</Duration>
+<MediaFiles>
+<MediaFile id="1" delivery="streaming" type="application/x-mpegURL">
+<![CDATA[ https://redirector.gvt1.com/api/manifest/hls_variant/requiressl/yes/source/dclk_video_ads/id/f1be9c477e89fd68/itag/0/playlist_type/DVR/xpc/EgVovf3BOg%3D%3D/acao/yes/ctier/L/hfr/all/keepalive/yes/ip/0.0.0.0/ipbits/0/expire/1787213909/sparams/ip,ipbits,expire,requiressl,source,id,itag,playlist_type,xpc,acao,ctier,hfr/signature/6D96D50B8F251B43ED68BC63353BBF0207DAE4E6.AF9273D6E7E44F5D247E3648CBBB1A5512C2F7A5/key/ck2/cpn/OPYl1osxtWb5EL3p/file/index.m3u8 ]]>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+</VAST>
