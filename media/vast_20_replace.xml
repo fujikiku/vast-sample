@@ -2,7 +2,7 @@
 <!--  使用テスト: #22 / HLS + DASH + mp4  -->
 <Ad id="mediafile-pattern-21">
 <InLine>
-<AdSystem>TVer Studio</AdSystem>
+<AdSystem>Studio</AdSystem>
 <AdTitle>MediaFile pattern test 21 (case #22)</AdTitle>
 <Error>
 <![CDATA[ https://ads.in-tver.jp/interaction?event=error ]]>
@@ -16,7 +16,7 @@
 <Duration>00:00:10</Duration>
 <MediaFiles>
 <MediaFile id="1" delivery="streaming" type="application/x-mpegURL">
-<![CDATA[ https://redirector.gvt1.com/api/manifest/hls_variant/requiressl/yes/source/dclk_video_ads/id/f1be9c477e89fd68/itag/0/playlist_type/DVR/xpc/EgVovf3BOg%3D%3D/acao/yes/ctier/L/hfr/all/keepalive/yes/ip/0.0.0.0/ipbits/0/expire/1787041685/sparams/ip,ipbits,expire,requiressl,source,id,itag,playlist_type,xpc,acao,ctier,hfr/signature/656AB0E5D0642E828F972A033C375495321BD283.0FE4A650A4CA629B90C9FCC48B7CFD512A473917/key/ck2/cpn/PulFd7WWeDTEaISx/file/index.m3u8 ]]>
+<![CDATA[ https://redirector.gvt1.com/api/manifest/hls_variant/requiressl/yes/source/dclk_video_ads/id/f1be9c477e89fd68/itag/0/playlist_type/DVR/xpc/EgVovf3BOg%3D%3D/acao/yes/ctier/L/hfr/all/keepalive/yes/ip/0.0.0.0/ipbits/0/expire/1787214892/sparams/ip,ipbits,expire,requiressl,source,id,itag,playlist_type,xpc,acao,ctier,hfr/signature/36E053F74A9E4CF115E45C0A45B8A736EBBEF9F0.96385E942176F052B5AEC8FDB59BA1C90FD3752A/key/ck2/cpn/PBPbz8tl0IpPGMhD/file/index.m3u8  ]]>
 </MediaFile>
 <MediaFile id="2" delivery="streaming" type="application/dash+xml">
 <![CDATA[ https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd ]]>
