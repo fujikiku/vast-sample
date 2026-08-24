@@ -13,8 +13,8 @@
           <Linear>
             <Duration>00:00:10</Duration>
             <MediaFiles>
-              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
-                <![CDATA[https://example.com/xxx.mp4]]>
+              <MediaFile id="1" delivery="streaming" type="application/vnd.apple.mpegurl">
+                <![CDATA[ https://redirector.gvt1.com/api/manifest/hls_variant/requiressl/yes/source/dclk_video_ads/id/fc1316d12845b95d/itag/0/playlist_type/DVR/xpc/EgVovf3BOg%3D%3D/acao/yes/ctier/L/hfr/all/keepalive/yes/ip/0.0.0.0/ipbits/0/expire/1787042463/sparams/ip,ipbits,expire,requiressl,source,id,itag,playlist_type,xpc,acao,ctier,hfr/signature/58DCB28C4467F0AB33533165A940FFFEFCFC83EA.72CD152B6CB1FB5C7915CFD9412E5692972B018C/key/ck2/cpn/grnBxpUsyqnJrszZ/file/index.m3u8 ]]>
               </MediaFile>
             </MediaFiles>
           </Linear>
