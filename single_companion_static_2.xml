@@ -13,8 +13,8 @@
           <Linear>
             <Duration>00:00:10</Duration>
             <MediaFiles>
-              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
-                <![CDATA[https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4]]>
+              <MediaFile delivery="progressive" type="video/mp4" width="1280" height="720">
+                <![CDATA[ https://storage.googleapis.com/interactive-media-ads/media/android.mp4 ]]>
               </MediaFile>
             </MediaFiles>
           </Linear>
