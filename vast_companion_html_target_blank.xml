@@ -1,54 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  テスト用VAST: HTMLコンパニオン広告 - target="_blank" / window.open() パターン
-  companion内のリンクは新規ウィンドウを要求する形式(IMAの onCreateWindow / ポップアップWebView経路を通ることを狙う)
--->
-<VAST version="3.0">
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
   <Ad id="test-companion-target-blank">
     <InLine>
-      <AdSystem>TestAdSystem</AdSystem>
-      <AdTitle>test companion ad (html target_blank)</AdTitle>
-      <Description><![CDATA[HTML companion click test: target=_blank / window.open]]></Description>
-      <Impression><![CDATA[https://example.com/track/impression?case=target_blank]]></Impression>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>CompanionClickTracking 検証用サンプル (target_blank)</AdTitle>
+
+      <Error><![CDATA[http://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression?case=target_blank]]></Impression>
+
       <Creatives>
-        <Creative id="linear-1" sequence="1">
+
+        <Creative id="cr_linear" sequence="1">
           <Linear>
             <Duration>00:00:10</Duration>
             <TrackingEvents>
               <Tracking event="start"><![CDATA[https://example.com/track/start?case=target_blank]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[https://example.com/track/firstQuartile?case=target_blank]]></Tracking>
+              <Tracking event="midpoint"><![CDATA[https://example.com/track/midpoint?case=target_blank]]></Tracking>
+              <Tracking event="thirdQuartile"><![CDATA[https://example.com/track/thirdQuartile?case=target_blank]]></Tracking>
               <Tracking event="complete"><![CDATA[https://example.com/track/complete?case=target_blank]]></Tracking>
             </TrackingEvents>
-            <VideoClicks>
-              <ClickThrough id="linear-clickthrough"><![CDATA[https://example.com/landing/linear?case=target_blank]]></ClickThrough>
-            </VideoClicks>
             <MediaFiles>
-              <MediaFile id="mp4-1" delivery="progressive" type="video/mp4" width="640" height="360" bitrate="500">
-                <![CDATA[https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4]]>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
               </MediaFile>
             </MediaFiles>
           </Linear>
         </Creative>
-        <Creative id="companion-1" sequence="1">
+
+        <Creative id="cr_companion" sequence="1">
           <CompanionAds>
-            <Companion id="companion-target-blank" width="300" height="250">
+            <Companion id="companion-target-blank-300x250" width="300" height="250">
               <HTMLResource><![CDATA[
 <html>
   <head>
     <style>
-      html, body { margin:0; padding:0; width:300px; height:250px; background:#1a73e8; }
-      a.cta {
+      html, body { margin:0; padding:0; background:transparent; }
+      .box {
+        width:300px; height:250px; background:#1a73e8;
         display:flex; align-items:center; justify-content:center;
-        width:100%; height:100%; color:#fff; font-family:sans-serif; font-size:20px;
-        text-decoration:none;
+        box-sizing:border-box;
+      }
+      a.cta {
+        color:#fff; font-family:sans-serif; font-size:16px; text-decoration:none; text-align:center;
       }
     </style>
   </head>
   <body>
-    <!-- パターンA-1: target="_blank" 付きの通常リンク -->
-    <a class="cta" href="https://example.com/landing/companion?case=target_blank_anchor" target="_blank">
-      Learn More (target=_blank)
-    </a>
-    <!-- パターンA-2: window.open() をJSで明示的に呼ぶボタン(同じHTML内に両方置いておく) -->
+    <div class="box">
+      <!-- パターンA-1: target="_blank" 付きの通常リンク -->
+      <a class="cta" href="https://example.com/landing/companion?case=target_blank_anchor" target="_blank">
+        Learn More<br/>(target=_blank)
+      </a>
+    </div>
     <script>
       function openViaJs() {
         window.open('https://example.com/landing/companion?case=window_open_js', '_blank');
@@ -58,11 +61,39 @@
 </html>
               ]]></HTMLResource>
               <TrackingEvents>
-                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=target_blank]]></Tracking>
+                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=target_blank&size=300x250]]></Tracking>
+              </TrackingEvents>
+            </Companion>
+            <Companion id="companion-target-blank-300x60" width="300" height="60">
+              <HTMLResource><![CDATA[
+<html>
+  <head>
+    <style>
+      html, body { margin:0; padding:0; background:transparent; }
+      .box {
+        width:300px; height:60px; background:#1a73e8;
+        display:flex; align-items:center; justify-content:center;
+        box-sizing:border-box;
+      }
+      a.cta { color:#fff; font-family:sans-serif; font-size:14px; text-decoration:none; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <a class="cta" href="https://example.com/landing/companion?case=target_blank_anchor_60" target="_blank">
+        Learn More (target=_blank)
+      </a>
+    </div>
+  </body>
+</html>
+              ]]></HTMLResource>
+              <TrackingEvents>
+                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=target_blank&size=300x60]]></Tracking>
               </TrackingEvents>
             </Companion>
           </CompanionAds>
         </Creative>
+
       </Creatives>
     </InLine>
   </Ad>

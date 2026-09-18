@@ -1,63 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  テスト用VAST: HTMLコンパニオン広告 - <a href="..."> のみ、target指定なしパターン
-  companion内のリンクは同一WebView内での通常遷移を要求する形式
-  (IMAがWebViewClientを設定していない場合の既定動作 = 案4 を狙って確認するためのテスト用)
--->
-<VAST version="3.0">
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
   <Ad id="test-companion-no-target">
     <InLine>
-      <AdSystem>TestAdSystem</AdSystem>
-      <AdTitle>test companion ad (html no target)</AdTitle>
-      <Description><![CDATA[HTML companion click test: plain <a href> with no target]]></Description>
-      <Impression><![CDATA[https://example.com/track/impression?case=no_target]]></Impression>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <AdTitle>CompanionClickTracking 検証用サンプル (no_target)</AdTitle>
+
+      <Error><![CDATA[http://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression?case=no_target]]></Impression>
+
       <Creatives>
-        <Creative id="linear-1" sequence="1">
+
+        <Creative id="cr_linear" sequence="1">
           <Linear>
             <Duration>00:00:10</Duration>
             <TrackingEvents>
               <Tracking event="start"><![CDATA[https://example.com/track/start?case=no_target]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[https://example.com/track/firstQuartile?case=no_target]]></Tracking>
+              <Tracking event="midpoint"><![CDATA[https://example.com/track/midpoint?case=no_target]]></Tracking>
+              <Tracking event="thirdQuartile"><![CDATA[https://example.com/track/thirdQuartile?case=no_target]]></Tracking>
               <Tracking event="complete"><![CDATA[https://example.com/track/complete?case=no_target]]></Tracking>
             </TrackingEvents>
-            <VideoClicks>
-              <ClickThrough id="linear-clickthrough"><![CDATA[https://example.com/landing/linear?case=no_target]]></ClickThrough>
-            </VideoClicks>
             <MediaFiles>
-              <MediaFile id="mp4-1" delivery="progressive" type="video/mp4" width="640" height="360" bitrate="500">
-                <![CDATA[https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4]]>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
               </MediaFile>
             </MediaFiles>
           </Linear>
         </Creative>
-        <Creative id="companion-1" sequence="1">
+
+        <Creative id="cr_companion" sequence="1">
           <CompanionAds>
-            <Companion id="companion-no-target" width="300" height="250">
+            <Companion id="companion-no-target-300x250" width="300" height="250">
               <HTMLResource><![CDATA[
 <html>
   <head>
     <style>
-      html, body { margin:0; padding:0; width:300px; height:250px; background:#d93025; }
-      a.cta {
+      html, body { margin:0; padding:0; background:transparent; }
+      .box {
+        width:300px; height:250px; background:#d93025;
         display:flex; align-items:center; justify-content:center;
-        width:100%; height:100%; color:#fff; font-family:sans-serif; font-size:20px;
-        text-decoration:none;
+        box-sizing:border-box;
+      }
+      a.cta {
+        color:#fff; font-family:sans-serif; font-size:16px; text-decoration:none; text-align:center;
       }
     </style>
   </head>
   <body>
-    <!-- パターンB: target属性を一切指定しない通常のリンク -->
-    <a class="cta" href="https://example.com/landing/companion?case=no_target_anchor">
-      Learn More (no target)
-    </a>
+    <div class="box">
+      <!-- パターンB: target属性を一切指定しない通常のリンク -->
+      <a class="cta" href="https://example.com/landing/companion?case=no_target_anchor">
+        Learn More<br/>(no target)
+      </a>
+    </div>
   </body>
 </html>
               ]]></HTMLResource>
               <TrackingEvents>
-                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=no_target]]></Tracking>
+                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=no_target&size=300x250]]></Tracking>
+              </TrackingEvents>
+            </Companion>
+            <Companion id="companion-no-target-300x60" width="300" height="60">
+              <HTMLResource><![CDATA[
+<html>
+  <head>
+    <style>
+      html, body { margin:0; padding:0; background:transparent; }
+      .box {
+        width:300px; height:60px; background:#d93025;
+        display:flex; align-items:center; justify-content:center;
+        box-sizing:border-box;
+      }
+      a.cta { color:#fff; font-family:sans-serif; font-size:14px; text-decoration:none; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <a class="cta" href="https://example.com/landing/companion?case=no_target_anchor_60">
+        Learn More (no target)
+      </a>
+    </div>
+  </body>
+</html>
+              ]]></HTMLResource>
+              <TrackingEvents>
+                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=no_target&size=300x60]]></Tracking>
               </TrackingEvents>
             </Companion>
           </CompanionAds>
         </Creative>
+
       </Creatives>
     </InLine>
   </Ad>
