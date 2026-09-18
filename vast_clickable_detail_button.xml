@@ -1,0 +1,87 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+  <Ad id="test-clickable-detail-button">
+    <InLine>
+      <AdSystem version="1.0">AdServer</AdSystem>
+      <!-- "clickable"で詳細ボタン表示、"companion"でcompanion表示(modal_companion/snackbar_companionではない無印companion扱い) -->
+      <AdTitle>test companion clickable ad</AdTitle>
+
+      <Error><![CDATA[http://example.com/error?code=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[http://example.com/track/impression?case=clickable_detail_button]]></Impression>
+
+      <Creatives>
+
+        <Creative id="cr_linear" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[https://example.com/track/start?case=clickable_detail_button]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[https://example.com/track/firstQuartile?case=clickable_detail_button]]></Tracking>
+              <Tracking event="midpoint"><![CDATA[https://example.com/track/midpoint?case=clickable_detail_button]]></Tracking>
+              <Tracking event="thirdQuartile"><![CDATA[https://example.com/track/thirdQuartile?case=clickable_detail_button]]></Tracking>
+              <Tracking event="complete"><![CDATA[https://example.com/track/complete?case=clickable_detail_button]]></Tracking>
+            </TrackingEvents>
+            <!-- 詳細ボタン表示に必須: 空でないClickThrough -->
+            <VideoClicks>
+              <ClickThrough><![CDATA[https://example.com/landing/detail-button-test]]></ClickThrough>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+                <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+
+        <Creative id="cr_companion" sequence="1">
+          <CompanionAds>
+            <Companion id="companion-clickable-300x250" width="300" height="250">
+              <HTMLResource><![CDATA[
+<html>
+  <head>
+    <style>
+      html, body { margin:0; padding:0; background:transparent; }
+      .box {
+        width:300px; height:250px; background:#188038;
+        display:flex; align-items:center; justify-content:center;
+        box-sizing:border-box; color:#fff; font-family:sans-serif; font-size:16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">companion (300x250)</div>
+  </body>
+</html>
+              ]]></HTMLResource>
+              <TrackingEvents>
+                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=clickable_detail_button&size=300x250]]></Tracking>
+              </TrackingEvents>
+            </Companion>
+            <Companion id="companion-clickable-300x60" width="300" height="60">
+              <HTMLResource><![CDATA[
+<html>
+  <head>
+    <style>
+      html, body { margin:0; padding:0; background:transparent; }
+      .box {
+        width:300px; height:60px; background:#188038;
+        display:flex; align-items:center; justify-content:center;
+        box-sizing:border-box; color:#fff; font-family:sans-serif; font-size:14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">companion (300x60)</div>
+  </body>
+</html>
+              ]]></HTMLResource>
+              <TrackingEvents>
+                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=clickable_detail_button&size=300x60]]></Tracking>
+              </TrackingEvents>
+            </Companion>
+          </CompanionAds>
+        </Creative>
+
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
