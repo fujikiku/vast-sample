@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  テスト用VAST: HTMLコンパニオン広告 - 最小構成(赤一色、リンク/JS無し)
+  ネットワーク到達性やIMAのSSL検証問題の切り分け用。
+  これすら表示されない/読み込めない場合は、companionのHTML内容ではなく
+  VAST取得自体(ホスティング・証明書等)の問題である可能性が高い。
+-->
+<VAST version="3.0">
+  <Ad id="test-companion-plain-red">
+    <InLine>
+      <AdSystem>TestAdSystem</AdSystem>
+      <AdTitle>test companion ad (plain red, no link)</AdTitle>
+      <Description><![CDATA[Minimal HTML companion: solid red, no anchor/JS]]></Description>
+      <Impression><![CDATA[https://example.com/track/impression?case=plain_red]]></Impression>
+      <Creatives>
+        <Creative id="linear-1" sequence="1">
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[https://example.com/track/start?case=plain_red]]></Tracking>
+              <Tracking event="complete"><![CDATA[https://example.com/track/complete?case=plain_red]]></Tracking>
+            </TrackingEvents>
+            <VideoClicks>
+              <ClickThrough id="linear-clickthrough"><![CDATA[https://example.com/landing/linear?case=plain_red]]></ClickThrough>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile id="mp4-1" delivery="progressive" type="video/mp4" width="640" height="360" bitrate="500">
+                <![CDATA[https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+        <Creative id="companion-1" sequence="1">
+          <CompanionAds>
+            <Companion id="companion-plain-red" width="300" height="250">
+              <HTMLResource><![CDATA[<html><body style="margin:0;padding:0;width:300px;height:250px;background:#ff0000;"></body></html>]]></HTMLResource>
+              <TrackingEvents>
+                <Tracking event="creativeView"><![CDATA[https://example.com/track/companion/creativeView?case=plain_red]]></Tracking>
+              </TrackingEvents>
+            </Companion>
+          </CompanionAds>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
