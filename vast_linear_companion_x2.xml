@@ -22,7 +22,7 @@
       </VideoClicks>
       <MediaFiles>
        <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2000" scalable="true" maintainAspectRatio="true">
-        <![CDATA[https://storage.googleapis.com/gvabox/media/samples/stock.mp4]]>
+        <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
        </MediaFile>
       </MediaFiles>
      </Linear>
@@ -70,7 +70,7 @@
       </VideoClicks>
       <MediaFiles>
        <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2000" scalable="true" maintainAspectRatio="true">
-        <![CDATA[https://storage.googleapis.com/gvabox/media/samples/stock.mp4]]>
+        <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
        </MediaFile>
       </MediaFiles>
      </Linear>
