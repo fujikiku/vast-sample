@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+ <Ad id="2">
+  <InLine>
+   <AdSystem>GDFP</AdSystem>
+   <AdTitle>テスト広告2(companion付き)</AdTitle>
+   <Description><![CDATA[3連続リニア広告のうち2本目]]></Description>
+   <Impression><![CDATA[https://example.com/impression?ad=2]]></Impression>
+   <Creatives>
+    <Creative id="2-linear" sequence="1">
+     <Linear>
+      <Duration>00:00:10</Duration>
+      <TrackingEvents>
+       <Tracking event="start"><![CDATA[https://example.com/tracking?ad=2&event=start]]></Tracking>
+       <Tracking event="firstQuartile"><![CDATA[https://example.com/tracking?ad=2&event=firstQuartile]]></Tracking>
+       <Tracking event="midpoint"><![CDATA[https://example.com/tracking?ad=2&event=midpoint]]></Tracking>
+       <Tracking event="thirdQuartile"><![CDATA[https://example.com/tracking?ad=2&event=thirdQuartile]]></Tracking>
+       <Tracking event="complete"><![CDATA[https://example.com/tracking?ad=2&event=complete]]></Tracking>
+      </TrackingEvents>
+      <VideoClicks>
+       <ClickThrough><![CDATA[https://example.com/clickthrough?ad=2]]></ClickThrough>
+      </VideoClicks>
+      <MediaFiles>
+       <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2000" scalable="true" maintainAspectRatio="true">
+        <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
+       </MediaFile>
+      </MediaFiles>
+     </Linear>
+    </Creative>
+    <Creative id="2-companion" sequence="1">
+     <CompanionAds>
+      <Companion width="300" height="250">
+       <StaticResource creativeType="image/png"><![CDATA[https://placehold.co/300x250.png?text=Ad2]]></StaticResource>
+       <TrackingEvents>
+        <Tracking event="creativeView"><![CDATA[https://example.com/tracking?ad=2&event=companion_300x250_view]]></Tracking>
+       </TrackingEvents>
+       <CompanionClickThrough><![CDATA[https://example.com/clickthrough?ad=2&slot=300x250]]></CompanionClickThrough>
+      </Companion>
+      <Companion width="300" height="60">
+       <StaticResource creativeType="image/png"><![CDATA[https://placehold.co/300x60.png?text=Ad2]]></StaticResource>
+       <TrackingEvents>
+        <Tracking event="creativeView"><![CDATA[https://example.com/tracking?ad=2&event=companion_300x60_view]]></Tracking>
+       </TrackingEvents>
+       <CompanionClickThrough><![CDATA[https://example.com/clickthrough?ad=2&slot=300x60]]></CompanionClickThrough>
+      </Companion>
+     </CompanionAds>
+    </Creative>
+   </Creatives>
+  </InLine>
+ </Ad>
+</VAST>
