@@ -22,7 +22,7 @@
       </VideoClicks>
       <MediaFiles>
        <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2000" scalable="true" maintainAspectRatio="true">
-        <![CDATA[https://github.com/fujikiku/vast-sample/raw/main/media/ads_ima_samle_720p.mp4]]>
+        <![CDATA[https://raw.githubusercontent.com/fujikiku/vast-sample/main/media/ad_24fps_2000k.mp4]]>
        </MediaFile>
       </MediaFiles>
      </Linear>
